@@ -1,0 +1,264 @@
+2020-07-20 14:59:21,251 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-20 14:59:21,417 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.20/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 72
+2020-07-20 14:59:21,418 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.20/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.167s]
+2020-07-20 14:59:21,418 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-20 14:59:21,423 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":14,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-20 14:59:30,615 - E:/py/pushgateway/pushCalculateElectric.py[line:29] - INFO: 运行0k
+2020-07-20 15:01:51,562 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.20/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.179s]
+2020-07-20 15:02:00,750 - E:/py/pushgateway/pushCalculateElectric.py[line:28] - INFO: 运行0k
+2020-07-20 15:05:10,860 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.86:9200
+2020-07-20 15:05:31,876 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:256] - WARNING: POST http://192.168.3.86:9200/logstash-job-executor-2020.07.20/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:N/A request:21.017s]
+Traceback (most recent call last):
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "E:\py\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "E:\py\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\py\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 233, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 725, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\py\venv\lib\site-packages\urllib3\util\retry.py", line 379, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "E:\py\venv\lib\site-packages\urllib3\packages\six.py", line 735, in reraise
+    raise value
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 966, in send
+    self.connect()
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EB3C883608>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2020-07-20 15:05:31,994 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:267] - DEBUG: > None
+2020-07-20 15:05:31,995 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (2): 192.168.3.86:9200
+2020-07-20 15:05:53,000 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:256] - WARNING: POST http://192.168.3.86:9200/logstash-job-executor-2020.07.20/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:N/A request:21.004s]
+Traceback (most recent call last):
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "E:\py\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "E:\py\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\py\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 233, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 725, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\py\venv\lib\site-packages\urllib3\util\retry.py", line 379, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "E:\py\venv\lib\site-packages\urllib3\packages\six.py", line 735, in reraise
+    raise value
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 966, in send
+    self.connect()
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EB3C883E48>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2020-07-20 15:05:53,002 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:267] - DEBUG: > None
+2020-07-20 15:05:53,002 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (3): 192.168.3.86:9200
+2020-07-20 15:06:14,022 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:256] - WARNING: POST http://192.168.3.86:9200/logstash-job-executor-2020.07.20/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:N/A request:21.019s]
+Traceback (most recent call last):
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "E:\py\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "E:\py\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\py\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 233, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 725, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\py\venv\lib\site-packages\urllib3\util\retry.py", line 379, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "E:\py\venv\lib\site-packages\urllib3\packages\six.py", line 735, in reraise
+    raise value
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 966, in send
+    self.connect()
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EB3C8F82C8>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2020-07-20 15:06:14,024 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:267] - DEBUG: > None
+2020-07-20 15:06:14,025 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (4): 192.168.3.86:9200
+2020-07-20 15:06:35,041 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:256] - WARNING: POST http://192.168.3.86:9200/logstash-job-executor-2020.07.20/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:N/A request:21.016s]
+Traceback (most recent call last):
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "E:\py\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "E:\py\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\py\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 233, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 725, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "E:\py\venv\lib\site-packages\urllib3\util\retry.py", line 379, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "E:\py\venv\lib\site-packages\urllib3\packages\six.py", line 735, in reraise
+    raise value
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "E:\py\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "C:\Users\ThinkPad\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 966, in send
+    self.connect()
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "E:\py\venv\lib\site-packages\urllib3\connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EB3C8F8B08>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2020-07-20 15:06:35,044 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:267] - DEBUG: > None
+2020-07-21 09:59:37,085 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-21 09:59:37,314 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 71
+2020-07-21 09:59:37,314 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.229s]
+2020-07-21 09:59:37,314 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 09:59:37,314 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":4,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-21 09:59:37,340 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "GET /logstash-job-executor-2020.07.22 HTTP/1.1" 404 451
+2020-07-21 09:59:37,340 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:256] - WARNING: GET http://192.168.3.96:9200/logstash-job-executor-2020.07.22 [status:404 request:0.026s]
+2020-07-21 09:59:37,340 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:267] - DEBUG: > None
+2020-07-21 09:59:37,340 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:272] - DEBUG: < {"error":{"root_cause":[{"type":"index_not_found_exception","reason":"no such index","resource.type":"index_or_alias","resource.id":"logstash-job-executor-2020.07.22","index_uuid":"_na_","index":"logstash-job-executor-2020.07.22"}],"type":"index_not_found_exception","reason":"no such index","resource.type":"index_or_alias","resource.id":"logstash-job-executor-2020.07.22","index_uuid":"_na_","index":"logstash-job-executor-2020.07.22"},"status":404}
+2020-07-21 10:04:40,523 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-21 10:04:40,693 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 71
+2020-07-21 10:04:40,693 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.170s]
+2020-07-21 10:04:40,693 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:04:40,693 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":5,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-21 10:04:40,721 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "GET /logstash-job-executor-2020.07.20 HTTP/1.1" 200 4256
+2020-07-21 10:04:40,776 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: GET http://192.168.3.96:9200/logstash-job-executor-2020.07.20 [status:200 request:0.083s]
+2020-07-21 10:04:40,776 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:04:40,776 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"logstash-job-executor-2020.07.20":{"aliases":{},"mappings":{"_default_":{"dynamic_templates":[{"message_field":{"path_match":"message","match_mapping_type":"string","mapping":{"norms":false,"type":"text"}}},{"string_fields":{"match":"*","match_mapping_type":"string","mapping":{"fields":{"keyword":{"ignore_above":256,"type":"keyword"}},"norms":false,"type":"text"}}}],"properties":{"@timestamp":{"type":"date"},"@version":{"type":"keyword"},"geoip":{"dynamic":"true","properties":{"ip":{"type":"ip"},"latitude":{"type":"half_float"},"location":{"type":"geo_point"},"longitude":{"type":"half_float"}}}}},"doc":{"dynamic_templates":[{"message_field":{"path_match":"message","match_mapping_type":"string","mapping":{"norms":false,"type":"text"}}},{"string_fields":{"match":"*","match_mapping_type":"string","mapping":{"fields":{"keyword":{"ignore_above":256,"type":"keyword"}},"norms":false,"type":"text"}}}],"properties":{"@timestamp":{"type":"date"},"@version":{"type":"keyword"},"CONTENT":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"END":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"HANDLER_COST":{"type":"long"},"HANDLER_NAME":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"INFO":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"IN_COST ":{"type":"long"},"IN_EXCEPTION":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"IN_EXTEND":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"LOG_LEVEL":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"METHOD":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"ORDER_LOG":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"ORDER_STATISTICS":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"PRODUCT_JOB_LOG":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"QRYFRIEND_LOG":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"QRYFRIEND_TOKEN":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"RESULT":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"SID":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"START":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"TIMESTAMP":{"type":"long"},"TRIGGER_PARAM":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"beat":{"properties":{"hostname":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"name":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"version":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}}}},"geoip":{"dynamic":"true","properties":{"ip":{"type":"ip"},"latitude":{"type":"half_float"},"location":{"type":"geo_point"},"longitude":{"type":"half_float"}}},"host":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"input_type":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"offset":{"type":"long"},"source":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"tags":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"timestamp":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"type":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}},"支付成功待续费的购买记录":{"type":"text","norms":false,"fields":{"keyword":{"type":"keyword","ignore_above":256}}}}}},"settings":{"index":{"refresh_interval":"5s","number_of_shards":"5","provided_name":"logstash-job-executor-2020.07.20","creation_date":"1595203887766","number_of_replicas":"2","uuid":"cBH_t8ZBQqiBxKZOEXBFVg","version":{"created":"6050399"}}}}}
+2020-07-21 10:06:49,941 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-21 10:06:50,046 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 71
+2020-07-21 10:06:50,046 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.105s]
+2020-07-21 10:06:50,046 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:06:50,046 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":5,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-21 10:06:50,135 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "HEAD /logstash-job-executor-2020.07.20 HTTP/1.1" 200 0
+2020-07-21 10:06:50,136 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: HEAD http://192.168.3.96:9200/logstash-job-executor-2020.07.20 [status:200 request:0.090s]
+2020-07-21 10:06:50,136 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:06:50,136 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < 
+2020-07-21 10:23:12,711 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-21 10:23:12,823 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "HEAD /logstash-job-executor-2020.07.21 HTTP/1.1" 200 0
+2020-07-21 10:23:12,824 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: HEAD http://192.168.3.96:9200/logstash-job-executor-2020.07.21 [status:200 request:0.113s]
+2020-07-21 10:23:12,824 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:23:12,824 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < 
+2020-07-21 10:23:12,903 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 71
+2020-07-21 10:23:12,904 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.079s]
+2020-07-21 10:23:12,904 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:23:12,904 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":5,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-21 10:23:33,072 - E:/py/pushgateway/pushCalculateElectric.py[line:32] - INFO: 电费统计job运行0k
+2020-07-21 10:26:17,896 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-21 10:26:17,997 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "HEAD /logstash-job-executor-2020.07.22 HTTP/1.1" 404 0
+2020-07-21 10:26:18,045 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.20/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 72
+2020-07-21 10:26:18,045 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.20/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.048s]
+2020-07-21 10:26:18,045 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:26:18,045 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":48,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-21 10:26:38,208 - E:/py/pushgateway/pushCalculateElectric.py[line:41] - INFO: 电费统计job运行0k
+2020-07-21 10:27:10,004 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-21 10:27:10,105 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "HEAD /logstash-job-executor-2020.07.22 HTTP/1.1" 404 0
+2020-07-21 10:27:10,222 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 71
+2020-07-21 10:27:10,222 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.116s]
+2020-07-21 10:27:10,222 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:27:10,222 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":5,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-21 10:27:19,507 - E:/py/pushgateway/pushCalculateElectric.py[line:35] - INFO: 电费统计job运行0k
+2020-07-21 10:43:22,021 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-21 10:43:22,213 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "HEAD /logstash-job-executor-2020.07.21 HTTP/1.1" 200 0
+2020-07-21 10:43:22,213 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: HEAD http://192.168.3.96:9200/logstash-job-executor-2020.07.21 [status:200 request:0.192s]
+2020-07-21 10:43:22,213 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:43:22,214 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < 
+2020-07-21 10:43:22,348 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 71
+2020-07-21 10:43:22,348 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.134s]
+2020-07-21 10:43:22,348 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:43:22,348 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":6,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-21 10:46:03,160 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-21 10:46:03,306 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "HEAD /logstash-job-executor-2020.07.21 HTTP/1.1" 200 0
+2020-07-21 10:46:03,306 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: HEAD http://192.168.3.96:9200/logstash-job-executor-2020.07.21 [status:200 request:0.146s]
+2020-07-21 10:46:03,307 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:46:03,307 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < 
+2020-07-21 10:46:03,335 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 71
+2020-07-21 10:46:03,335 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.027s]
+2020-07-21 10:46:03,335 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:46:03,335 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":6,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-21 10:48:34,458 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-21 10:48:34,583 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "HEAD /logstash-job-executor-2020.07.21 HTTP/1.1" 200 0
+2020-07-21 10:48:34,584 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: HEAD http://192.168.3.96:9200/logstash-job-executor-2020.07.21 [status:200 request:0.126s]
+2020-07-21 10:48:34,584 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:48:34,584 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < 
+2020-07-21 10:48:34,661 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 71
+2020-07-21 10:48:34,661 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.077s]
+2020-07-21 10:48:34,661 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:48:34,661 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":6,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-21 10:49:35,175 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:230] - DEBUG: Starting new HTTP connection (1): 192.168.3.96:9200
+2020-07-21 10:49:35,306 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "HEAD /logstash-job-executor-2020.07.21 HTTP/1.1" 200 0
+2020-07-21 10:49:35,306 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: HEAD http://192.168.3.96:9200/logstash-job-executor-2020.07.21 [status:200 request:0.131s]
+2020-07-21 10:49:35,306 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:49:35,307 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < 
+2020-07-21 10:49:35,337 - E:\py\venv\lib\site-packages\urllib3\connectionpool.py[line:442] - DEBUG: http://192.168.3.96:9200 "POST /logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler HTTP/1.1" 200 71
+2020-07-21 10:49:35,338 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:228] - INFO: POST http://192.168.3.96:9200/logstash-job-executor-2020.07.21/_count?q=HANDLER_NAME%3A+com.ll.job.lljobexecutor.jobhandler.CalculateElectricStatisticsHandler [status:200 request:0.030s]
+2020-07-21 10:49:35,338 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:230] - DEBUG: > None
+2020-07-21 10:49:35,338 - E:\py\venv\lib\site-packages\elasticsearch\connection\base.py[line:231] - DEBUG: < {"count":6,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0}}
+2020-07-21 10:49:44,498 - E:/py/pushgateway/pushCalculateElectric.py[line:29] - INFO: 电费统计job运行0k
