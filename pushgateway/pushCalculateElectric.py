@@ -35,7 +35,7 @@ def calculate_electricty_count(url,job_name):
             logging.info('电费统计job运行0k')
     except Exception as ex:
             logging.error("电费统计job出现异常:" + ex)
-            #print(ex)
+
 
 def post_Calculate_data(url,job_name,running_count):
     hostname = socket.gethostname()
